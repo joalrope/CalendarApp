@@ -3,7 +3,7 @@ import { AppRouter } from './routers/AppRouter'
 
 export const CalendarApp = () => {
     return (
-        <div>
+        <div className="calendar-screen">
             <AppRouter/>
         </div>
     )
