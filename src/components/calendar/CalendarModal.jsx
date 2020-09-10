@@ -98,7 +98,7 @@ export const CalendarModal = () => {
 
     return (
         <Modal
-          isOpen={true}
+          isOpen={false}
         //   onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
@@ -106,7 +106,7 @@ export const CalendarModal = () => {
           className= 'modal'
           overlayClassName= 'modal-fondo'
         >
-            <h1> Nuevo evento </h1>
+            <h3> Nuevo evento </h3>
             <hr />
             <form
                 className="container"
