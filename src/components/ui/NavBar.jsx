@@ -1,14 +1,22 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { startOpenModal } from '../../actions/ui';
 
-const handleEventAddClick = () => {
-    console.log('Agregar evento');
-}
-
-const handleQuitClick = () => {
-    console.log('Salir');
-}
 
 export const NavBar = () => {
+
+    const dispatch = useDispatch();
+
+    const handleEventAddClick = () => {
+        console.log('Agregar evento');
+        dispatch(startOpenModal());
+    }
+
+    const handleQuitClick = () => {
+        console.log('Salir');
+    }
+
+
     return (
         <div className="navbar navbar-dark bg-dark">
             <span className="navbar-brand">
