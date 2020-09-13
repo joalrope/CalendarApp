@@ -10,12 +10,13 @@ export const types = {
     uiStartLoading: '[UI] Start loading',
     uiFinishLoading: '[UI] Finish loading',
 
-    eventsAddNew: '[events] New event',
-    eventsActive: '[events] Set active event',
-    eventsLoad: '[events] Load events',
-    eventsUpdated: '[events] Updated event',
-    eventsDelete: '[events] Delete event',
-    eventsLogoutCleaninig: '[events] Lougout cleaning',
+    eventSetActive: '[event] Set active',
+    eventAddNew: '[event] Add New',
+    eventClearActiveEvent: '[event] Clear active event',
+    eventUpdated: '[event] Event updated',
+    eventDeleted: '[event] Event deleted',
+    // eventLoad: '[event] Load event',
+    // eventLogoutCleaninig: '[event] Lougout cleaning',
 
 
 

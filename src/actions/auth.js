@@ -6,8 +6,6 @@ import { notesLogout } from './notes';
 
 export const startLogin = (email, password) => { 
 
-    console.log(email, password)
-
     return (dispatch) => {
         
         dispatch(startLoading());
@@ -25,8 +23,6 @@ export const startLogin = (email, password) => {
 
 
 export const startRegister = (email, password, name) => {
-
-    console.log(email, password, name)
 
     return (dispatch) => {
 
