@@ -55,12 +55,6 @@ export const CalendarScreen = () => {
             color: 'white'
         }
 
-        if (isSelected){
-            style.backgroundColor= 'black'
-        } else {
-            style.backgroundColor= '367CF7'
-        }
-
         return {
             style
         }
