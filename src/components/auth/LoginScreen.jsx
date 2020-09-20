@@ -11,17 +11,17 @@ export const LoginScreen = () => {
     
 
     const [formLoginValues, handleLoginInputChange] = useForm({
-        lEmail: 'joalrope@gmail.com',
-        lPassword: '123456'
+        lEmail: '',
+        lPassword: ''
     });
     
     const {lEmail, lPassword} = formLoginValues;
 
     const [formRegisterValues, handleRegisterInputChange] = useForm({
-        rName: 'Joalrope Hotmail',
-        rEmail: 'joalrope@hotmail.com',
-        rPassword1: '123456',
-        rPassword2: '123456'
+        rName: '',
+        rEmail: '',
+        rPassword1: '',
+        rPassword2: ''
     });
 
     const {rName, rEmail, rPassword1, rPassword2} = formRegisterValues;
@@ -46,7 +46,7 @@ export const LoginScreen = () => {
             <div className="row">
                 <div className="col-md-6 login-form-1">
                     <h3>Ingreso</h3>
-                    <form onSubmit={handleLogin}>
+                    <form onSubmit={handleLogin} autoComplete="off">
                         <div className="form-group">
                             <input 
                                 type="text"
@@ -62,6 +62,7 @@ export const LoginScreen = () => {
                                 type="password"
                                 className="form-control"
                                 placeholder="Contraseña"
+                                autoComplete="new-password"
                                 name="lPassword"
                                 value={lPassword}
                                 onChange={handleLoginInputChange}
