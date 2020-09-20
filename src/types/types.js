@@ -16,12 +16,13 @@ export const types = {
     uiFinishLoading: '[UI] Finish loading',
 
     eventSetActive: '[event] Set active',
+    eventStartAddNew: '[event Start add new',
     eventAddNew: '[event] Add New',
     eventClearActiveEvent: '[event] Clear active event',
     eventUpdated: '[event] Event updated',
     eventDeleted: '[event] Event deleted',
-    // eventLoad: '[event] Load event',
-    // eventLogoutCleaninig: '[event] Lougout cleaning',
+    eventLoaded: '[event] Loaded events',
+    eventLogout: '[event] Lougout event',
 
 
 }

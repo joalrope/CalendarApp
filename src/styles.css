@@ -6,11 +6,11 @@ html, body {
 .calendar-screen {
     display: flex;
     flex-flow: column;
-    height: 87vh;
+    height: 100vh;
 }
 
 .rbc-calendar {
-    height: 93vh;
+    height: 91vh;
 }
 
 

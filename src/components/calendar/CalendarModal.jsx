@@ -6,7 +6,7 @@ import DateTimePicker from 'react-datetime-picker';
 import moment from 'moment';
 
 import { uiCloseModal } from '../../actions/ui';
-import { eventAddNew, eventClearActiveEvent, eventUpdated } from '../../actions/events';
+import { eventClearActiveEvent, eventStartAddNew, eventStartUpdate } from '../../actions/events';
 
 
 Modal.setAppElement('#root');
@@ -107,16 +107,9 @@ export const CalendarModal = () => {
 
         // TODO Realizar guardar datos en bd
         if (activeEvent) {
-            dispatch(eventUpdated(formValues));
+            dispatch(eventStartUpdate(formValues));
         } else {
-            dispatch(eventAddNew({
-                id: new Date().getTime(),
-                ...formValues,
-                user: {
-                    _id: '123',
-                    name: 'Joalrope'
-                }
-            }));
+            dispatch(eventStartAddNew(formValues));
         }
 
         setValidTitle(true);
