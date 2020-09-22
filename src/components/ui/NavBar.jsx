@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startLogout } from '../../actions/auth';
+import './styles.css';
 
 
 
@@ -15,15 +16,29 @@ export const NavBar = () => {
     const {name} = useSelector(state => state.auth);
 
     return (
-        <div className="navbar navbar-dark bg-dark">
-            <span className="navbar-brand">
-                 {name}
+        <div className="navbar navbar-dark bg-dark navbar-container">
+            <span className="navbar-brand user-name">
+                 {(name) ? name : 'Bienvenido'}
             </span>
-            
-            <button className="btn btn-sm btn-outline-danger mr-5" onClick={handleLogout}>
-                <i className='fas fa-sign-out-alt '></i>
-                <span> Salir</span>
-            </button>            
+
+            { (name) ?  <div className="navbar-buttons">
+                            <button className="btn btn-sm btn-outline-danger mr-5" onClick={handleLogout}>
+                                <i className='fas fa-sign-out-alt '></i>
+                                <span> Salir</span>
+                            </button>
+                        </div>
+                     :
+                        <div className="navbar-buttons">
+                            <button className="btn btn-sm btn-outline-info mr-3" onClick={handleLogout}>
+                                <i className='fas fa-sign-in-alt '></i>
+                                <span> Ingresar </span>
+                            </button>            
+                            <button className="btn btn-sm btn-outline-info mr-3" onClick={handleLogout}>
+                                <i className='fas fa-user-plus '></i>
+                                <span> Registrarse</span>
+                            </button>
+                        </div>
+            }    
         </div>
     )
 }

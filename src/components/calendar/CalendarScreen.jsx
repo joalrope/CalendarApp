@@ -7,7 +7,6 @@ import {Calendar, momentLocalizer} from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 import { CalendarEvent } from './CalendarEvent';
-import { NavBar } from '../ui/NavBar';
 import { messages } from '../../helpers/calendar-messages-es';
 import { CalendarModal } from './CalendarModal';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,6 +14,7 @@ import { uiOpenModal } from '../../actions/ui';
 import { eventClearActiveEvent, eventSetActive, eventStartLoading } from '../../actions/events';
 import { AddNewFab } from '../ui/AddNewFab';
 import { DeleteEventFab } from '../ui/DeleteEventFab';
+import { NavBar } from '../ui/NavBar';
 
 moment.locale('es');
 
@@ -67,8 +67,7 @@ export const CalendarScreen = () => {
 
     return (
         <div>
-          <NavBar/>
-
+            <NavBar />
             <Calendar
                 localizer={localizer}
                 events={events}

@@ -1,37 +1,41 @@
 
 
-.login-container{
+.auth-container{
     margin-top: 15%;
 }
 
-.login-form-1{
+.login-form{
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding: 1%;
-    max-width: 25%;
-    height: 40vh;
+    max-width: 40vh;
+    max-height: 14.5rem;
 }
 
-.login-form-1 h3{
+.login-form h3{
     text-align: center;
     color: #333;
 }
 
-.login-form-2{
+.register-form{
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding: 1%;
     background: #0062cc;
-    max-width: 25%;
-    height: 58vh;
+    max-width: 40vh;
+    max-height: 21rem;
 }
 
-.login-form-2 h3{
+.register-form h3{
     text-align: center;
     color: #fff;
 }
 
-.login-container form{
+.isLoginVisible {
+    visibility: hidden;
+}
+
+.auth-container form{
     padding: 8%;
 }
 
@@ -43,23 +47,23 @@
     cursor: pointer;
 }
 
-.login-form-1 .btnSubmit{
+.login-form .btnSubmit{
     color: #fff;
     background-color: #0062cc;
 }
 
-.login-form-2 .btnSubmit{
+.register-form .btnSubmit{
     background-color: #fff;
     color: #0062cc;
 }
 
-.login-form-2 .ForgetPwd{
+.register-form .ForgetPwd{
     color: #fff;
     font-weight: 600;
     text-decoration: none;
 }
 
-.login-form-1 .ForgetPwd{
+.login-form .ForgetPwd{
     color: #0062cc;
     font-weight: 600;
     text-decoration: none;
