@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
-import { startLogin, startRegister } from '../../actions/auth';
-import { useForm } from '../../hooks/userForm';
-import './login.css';
+import { startLogin, startRegister } from '../src/actions/auth';
+import { useForm } from '../src/hooks/userForm';
+import '../src/components/auth/styles.css';
 
-export const LoginScreen = () => {
+export const MainScreen = () => {
 
     const dispatch = useDispatch();
     

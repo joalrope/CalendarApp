@@ -6,7 +6,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import { startChecking } from '../actions/auth';
-import { LoginScreen } from '../components/auth/LoginScreen';
+import { MainScreen } from '../MainScreen';
 import { CalendarScreen } from '../components/calendar/CalendarScreen';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
@@ -14,16 +14,17 @@ import { PublicRoute } from './PublicRoute';
 export const AppRouter = () => {
 
     const dispatch = useDispatch();
-    const {checking, uid} = useSelector(state => state.auth);
+    // const {checking, uid} = useSelector(state => state.auth);
+    const {uid} = useSelector(state => state.auth);
     
 
     useEffect(() => {
         dispatch(startChecking());
     }, [dispatch])
 
-    if (checking) {
-        return (<h5>Espere...</h5>)
-    }
+    // if (checking) {
+    //     return (<h5>Espere...</h5>)
+    // }
     
 
     return (
@@ -33,7 +34,7 @@ export const AppRouter = () => {
                     <PublicRoute
                         exact
                         path="/login" 
-                        component= {LoginScreen}
+                        component= {MainScreen}
                         isAuthenticated={!!uid}
                         redirectTo= "/"
                     />
