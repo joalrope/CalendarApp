@@ -1,15 +1,33 @@
 html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.body-container {
+    /* background: url("background.png") no-repeat center center fixed; */
+    background-size: cover;
+    background-color: blueviolet;
+    opacity: 0.5;
+    position: fixed;
+}
+
+.header-container {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.body-container img{
     height: 100vh;
     width: 100vw;
 }
 
-body {
-    background: url("background.png") no-repeat center center fixed;
-    background-size: cover; 
-}
-
 .container {
     background-color: aliceblue;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    top: 55px;
 }
 
 .calendar-screen {

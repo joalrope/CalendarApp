@@ -10,10 +10,8 @@
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding:2%;
-    width: 50vh;
-    height: 17.5vw;
     top: 10px;
-    right: 250px;
+    right: 10%;
     z-index: 999;
 }
 
@@ -28,10 +26,8 @@
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding: 2%;
     background: #0062cc;
-    width: 50vh;
-    height: 24.5vw;
     top: 10px;
-    right: 250px;
+    right: 10%;
 }
 
 .register-form h3{
