@@ -8,12 +8,15 @@ export const types = {
     authStartRegister: '[auth] Start register',
     authStartTokenRenew: '[auth] Start token renew',
     authlogout: '[auth] Logout',
+    authShowLogin: '[auth] Show Login form',
+    authShowRegister: '[auth] Show Register form',
 
 
     uiOpenModal: '[UI] Open modal',
     uiCloseModal: '[UI] Close modal',
     uiStartLoading: '[UI] Start loading',
     uiFinishLoading: '[UI] Finish loading',
+
 
     eventSetActive: '[event] Set active',
     eventStartAddNew: '[event Start add new',

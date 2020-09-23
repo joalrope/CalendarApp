@@ -2,6 +2,8 @@ import { types } from '../types/types';
 
 const initialState = {
     checking: true,
+    loginVisible: false,
+    RegisterVisible: false
     // uid: null,
     // name: null
 
@@ -27,6 +29,18 @@ export const authReducer = ( state = initialState, action ) => {
             return {
                 state: undefined,
              }
+
+        case types.authShowLogin:
+            return {
+                ...state,
+                loginVisible: action.payload
+            }
+        
+        case types.authShowRegister:
+            return {
+                ...state,
+                RegisterVisible: action.payload
+            }
     
         default:
             return state;

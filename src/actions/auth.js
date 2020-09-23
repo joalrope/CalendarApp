@@ -86,6 +86,34 @@ export const startLogout = () => {
 }
 
 
+export const startShowLogin = () => {
+    return (dispatch) => {
+        dispatch(showLoginForm(true));
+    }
+}
+
+
+export const startShowRegister = () => {
+    return (dispatch) => {
+        dispatch(showRegisterForm(true));
+    }
+}
+
+
+export const startHideLogin = () => {
+    return (dispatch) => {
+        dispatch(showLoginForm(false));
+    }
+}
+
+
+export const startHideRegister = () => {
+    return (dispatch) => {
+        dispatch(showRegisterForm(false));
+    }
+}
+
+
 const login = (user) => ({
     type: types.authlogin,
     payload: user
@@ -99,4 +127,14 @@ const checkingFinish = () => ({
 
 const logout = () => ({
     type: types.authlogout
+})
+
+const showLoginForm = (valVisible) => ({
+    type: types.authShowLogin,
+    payload: valVisible
+})
+
+const showRegisterForm = (valVisible) => ({
+    type: types.authShowRegister,
+    payload: valVisible
 })

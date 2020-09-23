@@ -5,11 +5,16 @@
 }
 
 .login-form{
+    position: absolute;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-    padding: 1%;
-    max-width: 40vh;
-    max-height: 14.5rem;
+    padding:2%;
+    width: 50vh;
+    height: 17.5vw;
+    top: 10px;
+    right: 250px;
+    z-index: 999;
 }
 
 .login-form h3{
@@ -18,12 +23,15 @@
 }
 
 .register-form{
+    position: absolute;
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-    padding: 1%;
+    padding: 2%;
     background: #0062cc;
-    max-width: 40vh;
-    max-height: 21rem;
+    width: 50vh;
+    height: 24.5vw;
+    top: 10px;
+    right: 250px;
 }
 
 .register-form h3{
@@ -71,4 +79,22 @@
 
 .form-group {
     text-align: right;
+}
+
+.close {
+    position: absolute;
+    top: 1%;
+    right: 6%;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 100%;
+}
+
+.close:focus {
+    outline: none;
+}
+
+.close:hover {
+    border-radius: 20%;
+    background-color: rgb(204, 204, 204);
 }

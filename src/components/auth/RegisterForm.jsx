@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
-import { startRegister } from '../../actions/auth';
+import { startHideRegister, startRegister } from '../../actions/auth';
 import { useForm } from '../../hooks/userForm';
 import './styles.css';
 
@@ -22,18 +22,23 @@ export const RegisterForm = () => {
         e.preventDefault();
 
         if (Password1 !== Password2) {
-            return Swal.fire('Error', 'Las contraseas deben ser iguales', 'error')
+            return Swal.fire('Error', 'Las contraseñas deben ser iguales', 'error')
         }
         dispatch(startRegister(Name, Email, Password1));
     }
 
-    const regVisible = "hidden";
+    const handleHideRegister = () => {
+        dispatch(startHideRegister());
+    }
     
 
     return (
-        <div style={{ visibility: {regVisible} }} className="register-form">
+        <div className="register-form animate__animated animate__fadeIn">
+            <button type="button" className="close" aria-label="Close" onClick={handleHideRegister}>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h3>Registro</h3>
             <form onSubmit={handleSubmit}>
-                <h3>Registro</h3>
                 <div className="form-group">
                     <input
                         type="text"

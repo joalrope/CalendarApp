@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { startLogin } from '../../actions/auth';
+import { startHideLogin, startLogin } from '../../actions/auth';
 import { useForm } from '../../hooks/userForm';
 import './styles.css';
 
 export const LoginForm = () => {
 
     const dispatch = useDispatch();
-
+    
     const [formValues, handleInputChange] = useForm({
         Email: '',
         Password: ''
@@ -19,10 +19,17 @@ export const LoginForm = () => {
         e.preventDefault();
         dispatch(startLogin(Email, Password));
     }
+
+    const handleHideLogin = () => {
+        dispatch(startHideLogin());
+    }
     
 
     return (
-        <div className="login-form">
+        <div className="login-form animate__animated animate__fadeIn">
+            <button type="button" className="close" aria-label="Close" onClick={handleHideLogin}>
+                <span aria-hidden="true">&times;</span>
+            </button>
             <h3>Ingreso</h3>
             <form onSubmit={handleSubmit} autoComplete="off">
                 <div className="form-group">
