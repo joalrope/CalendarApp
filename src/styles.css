@@ -23,11 +23,15 @@ html, body {
 }
 
 .container {
-    background-color: aliceblue;
     position: relative;
-    width: 80%;
+    background-color: #fff;
     height: 100vh;
-    top: 55px;
+    top: 10px;
+}
+
+.modal-container {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .calendar-screen {

@@ -1,42 +1,27 @@
 
-
 .auth-container{
     margin-top: 15%;
 }
 
-.login-form{
+.login-form, .register-form{
     position: absolute;
-    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding:2%;
-    top: 10px;
-    right: 10%;
-    z-index: 999;
-}
-
-.login-form h3{
-    text-align: center;
-    color: #333;
-}
-
-.register-form{
-    position: absolute;
-    border-radius: 5px;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-    padding: 2%;
-    background: #0062cc;
+    border: 1px solid rgb(190, 190, 190, 0.5);
+    width: 40vh;
     top: 10px;
     right: 10%;
 }
 
-.register-form h3{
+.login-form, .register-form h3{
     text-align: center;
     color: #fff;
 }
 
-.isLoginVisible {
-    visibility: hidden;
+.goto-right {
+    cursor: pointer;
+    text-align: right;
 }
 
 .auth-container form{
@@ -44,21 +29,13 @@
 }
 
 .btnSubmit{
-    width: 50%;
-    border-radius: 1rem;
-    padding: 1.5%;
-    border: none;
+    width: 55%;
+    border-radius: 0.75rem;
     cursor: pointer;
 }
 
-.login-form .btnSubmit{
+.register-form {
     color: #fff;
-    background-color: #0062cc;
-}
-
-.register-form .btnSubmit{
-    background-color: #fff;
-    color: #0062cc;
 }
 
 .register-form .ForgetPwd{
@@ -79,18 +56,14 @@
 
 .close {
     position: absolute;
-    top: 1%;
-    right: 6%;
+    top: 3%;
+    right: 3%;
     vertical-align: middle;
     padding: 0px;
     border-radius: 100%;
 }
 
-.close:focus {
-    outline: none;
-}
-
 .close:hover {
-    border-radius: 20%;
-    background-color: rgb(204, 204, 204);
+    border-radius: 100%;
+    background-color: rgb(75, 75, 75);
 }

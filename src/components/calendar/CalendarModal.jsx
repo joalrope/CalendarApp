@@ -127,13 +127,9 @@ export const CalendarModal = () => {
           className= 'modal'
           overlayClassName= 'modal-fondo'
         >
-            <h3> {(activeEvent) ?' Editar Evento' : 'Nuevo evento'} </h3>
+            <h4> {(activeEvent) ?' Editar Evento' : 'Nuevo evento'} </h4>
             <hr />
-            <form
-                className="container"
-                onSubmit={handleSubmitForm}
-            >
-
+            <form className="modal-container" onSubmit={handleSubmitForm}>
                 <div className="form-group">
                     <label>Fecha y hora inicio</label>
                     <DateTimePicker

@@ -51,6 +51,12 @@ export const startRegister = (name, email, password) => {
 }
 
 
+export const startPassRecovery = (email) => {
+
+    
+}
+
+
 export const startChecking = () => {
     
     return async (dispatch) => {
@@ -100,6 +106,13 @@ export const startShowRegister = () => {
 }
 
 
+export const startShowPassForgot = () => {
+    return (dispatch) => {
+        dispatch(showPassForgotForm(true));
+    }
+}
+
+
 export const startHideLogin = () => {
     return (dispatch) => {
         dispatch(showLoginForm(false));
@@ -110,6 +123,13 @@ export const startHideLogin = () => {
 export const startHideRegister = () => {
     return (dispatch) => {
         dispatch(showRegisterForm(false));
+    }
+}
+
+
+export const startHidePassForgot = () => {
+    return (dispatch) => {
+        dispatch(showPassForgotForm(false));
     }
 }
 
@@ -136,5 +156,10 @@ const showLoginForm = (valVisible) => ({
 
 const showRegisterForm = (valVisible) => ({
     type: types.authShowRegister,
+    payload: valVisible
+})
+
+const showPassForgotForm = (valVisible) => ({
+    type: types.authShowPassForgot,
     payload: valVisible
 })

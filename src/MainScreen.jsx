@@ -2,11 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { LoginForm } from './components/auth/LoginForm';
 import { RegisterForm } from './components/auth/RegisterForm';
+import { PassForgotForm } from './components/auth/PassForgotForm'
 import { NavBar } from './components/ui/NavBar';
 
 export const MainScreen = () => {
 
-    const {loginVisible, RegisterVisible} = useSelector(state => state.auth)
+    const {loginVisible, RegisterVisible, PassForgotVisible} = useSelector(state => state.auth)
 
     return  <>
                 <div className="body-container">
@@ -17,6 +18,7 @@ export const MainScreen = () => {
                     <NavBar />
                     {(loginVisible) && <LoginForm/>}
                     {(RegisterVisible) && <RegisterForm/>}
+                    {(PassForgotVisible) && <PassForgotForm/>}
                 </div>
                 
                 <div className="container">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
-import { startHideRegister, startRegister } from '../../actions/auth';
+import { startHideRegister, startRegister, startShowLogin } from '../../actions/auth';
 import { useForm } from '../../hooks/userForm';
 import './styles.css';
 
@@ -30,13 +30,18 @@ export const RegisterForm = () => {
     const handleHideRegister = () => {
         dispatch(startHideRegister());
     }
+
+    const handleShowLogin = () => {
+        handleHideRegister();
+        dispatch(startShowLogin());
+    }
     
 
     return (
-        <div className="register-form animate__animated animate__fadeIn">
-            <button type="button" className="close" aria-label="Close" onClick={handleHideRegister}>
-                <span aria-hidden="true">&times;</span>
-            </button>
+        <div className="register-form bg-dark animate__animated animate__fadeIn">
+            <button className="btn close" onClick={handleHideRegister}>
+                <i className='far fa-times-circle'></i>
+            </button> 
             <h3>Registro</h3>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -84,8 +89,12 @@ export const RegisterForm = () => {
                 <div className="form-group">
                     <input 
                         type="submit" 
-                        className="btnSubmit" 
+                        className="btn btn-sm btn-outline-info btnSubmit" 
                         value="Crear cuenta" />
+                </div>
+
+                <div className="goto-right" onClick={handleShowLogin}>
+                    <small className="text-info">¿Ya esta registrado?</small>
                 </div>
             </form>
         </div>
